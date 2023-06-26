@@ -5,9 +5,11 @@ import random
 import time
 pygame.init()
 
-WIDTH, HEIGHT = 1000, 800 #window size by pixel
 
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
+info = pygame.display.Info()
+WIDTH, HEIGHT = info.current_w, info.current_h
+
+WIN = pygame.display.set_mode((1000, 800), pygame.RESIZABLE)
 pygame.display.set_caption("Aim Trainer") #sets name of window
 
 TARGET_INCREMENT = 400
